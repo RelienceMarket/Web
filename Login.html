@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <style>
+   *{
+       padding:0;
+       margin:0;
+       box-sizing:border-box;
+   } 
+   .container{
+      width:250px;
+      height:300px;
+     border:1px solid black;
+     position:absolute ;
+     top:30%;
+     left:70px;
+     overflow:hidden;
+     border-top-left-radius:25px;
+     border-bottom-right-radius:25px;
+     background:linear-gradient(red,pink);
+      
+   }
+  .ldoor{
+      width:50%;
+      height:300px;
+      background:brown;
+      position:absolute;
+      left:0px;
+      top:0px;
+      border:2px groove Black;
+      animation:one 1s 1;
+      transition:0.9s;
+      animation-fill-mode: forwards;
+      
+   }
+   
+  .rdoor{
+      width:50%;
+      height:300px;
+      background:brown;
+      position:absolute;
+      right:0px;
+      top:0px;
+      border:2px groove black;
+      animation:two 1s 1;
+      animation-fill-mode: forwards;
+      z-index:1;
+     
+   }
+
+  @keyframes one{
+      100%
+     {
+      position:absolute;
+      left:-130px;
+   
+      }
+      }
+      
+      @keyframes two{
+      100%{
+         right:-130px;
+      }
+  
+  }
+  #knob1{
+      width:5px;
+      height:20px;
+      background:white;
+      position:absolute;
+      top:45%;
+      right:10px;
+  }
+      
+       #knob2{
+      width:5px;
+      height:20px;
+      background:white;
+      position:absolute;
+      top:45%;
+      left:10px;
+  }
+      h1{
+          position:absolute;
+          top:1px;
+          left:80px;
+          color:white;
+          
+      }
+  hr{
+      width:100%; 
+      height:1px;
+      background:red;
+      margin-top:40px;
+  }
+       
+      #name{
+          font-size:20px;
+          margin-left:10px;
+          position:absolute;
+          top:50px;
+          color:white;
+         
+          
+      }
+   .Name{
+       width:90%;
+       height:30px;
+       margin-left:10px;
+       margin-top:20px;
+       outline:none;
+       border-radius:20px;
+       padding-left:15px;
+       background:inherit;
+       color:white;
+       border:1px solid black;
+       
+   }
+   
+   #pass{
+       font-size:20px;
+       margin-left:10px;
+       position: absolute;
+       top:120px;
+       color: white;
+      
+   }
+ .pass{
+       width:90%;
+       height:30px;
+       margin-left:10px;
+       margin-top:20px;
+       outline:none;
+       border-radius:20px;
+       padding-left:15px;
+       background:inherit;
+       color:white;
+       border:1px solid black;
+ }
+ 
+ 
+ #chk{
+     margin-left:10px;
+     
+ }
+    p{
+        margin-left:30px;
+        margin-top:-22px;
+    }
+    button{
+        width:120px;
+        height:30px;
+        margin-left:65px;
+        margin-top:30px;
+        background:deepskyblue;
+        border:1px solid black;
+        border-radius:20px;
+        color:white;
+    }
+    
+    @media (min-width:768px){
+        .container{
+       width:300px;
+      height:300px;
+     border:1px solid black;
+     position:absolute ;
+     top:20%;
+     left:250px;
+     overflow:hidden;
+     border-top-left-radius:25px;
+     border-bottom-right-radius:25px;
+     background:linear-gradient(red,pink);
+      
+        }
+        h1{
+            margin-left:30px;
+        }
+        #name{
+            font-size:25px;
+            position: absolute;
+            top:45px;
+        }
+        .Name{
+            height:40px;
+        }
+        
+        #pass{
+            font-size:25px;
+            position:absolute;
+            top:125px;
+        }
+        .pass{
+            height:40px;
+        }
+        #chk{
+            margin-left:20px;
+        }
+        p{
+            margin-left:40px;
+        }
+        button{
+          margin-top:15px;
+          margin-left:80px;
+        }
+        .Name::placeholder{
+            color:white;
+        }
+        .pass::placeholder{
+            color:white;
+        }
+          @keyframes one{
+      100%
+     {
+      position:absolute;
+      left:-150px;
+   
+      }
+      }
+      
+      @keyframes two{
+      100%{
+         right:-150px;
+      }
+  
+  }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <h1>Login</h1> <hr>
+         <form 
+<form action="https://api.web3forms.com/submit" method="POST">
+>
+         
+         <label id="name">
+             Name 
+             
+         </label>
+         <br>
+         <input type="hidden" name="access_key" value="b2cbc366-debe-47b2-ac58-e8156fbfc6ea">
+         
+         <input type="text" placeholder="Enter Name" class="Name" required="">
+         <br>
+         <label id="pass">
+             Password
+         </label>
+         <br>
+         <input type="password" placeholder="Enter Password" class="pass" required="">
+         <br>
+         <br>
+         <input type="checkbox" name="" id="chk">
+          <p> Remember Please Check </p>
+         <a href="INDEX.HTML"> <button value="Submit">Login </button></a>
+          </form>
+    <span class="ldoor">  <div id="knob1"> </div></span>
+    <span class="rdoor">
+        <div id="knob2"></div>
+       
+    </span>
+ 
+    </div>
+    
+</body>
+</html>
