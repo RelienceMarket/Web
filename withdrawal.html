@@ -69,6 +69,11 @@
     #notice{
       margin-left:100px;
       margin-top:100px;
+    }
+    #Go{
+      width:100px;
+      height:40px;
+      margin:50px auto;
   </style>
 </head>
 
@@ -87,6 +92,7 @@
   <p id="notice">Withdrawal 6 hours later</p>
 </div>
 </form>
+  <a href="<button id="Go">Go Back</button>
   <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwyaWRzlibqP1esZEh_vWBPngkVOrl0mOibdE1lEVZI5mgvvpFZmZWlhPU06rkrdthr/exec'
   const form = document.forms['submit-to-google-sheet']
@@ -97,6 +103,12 @@
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
   })
+
+    function close(){
+      let btn = document.getElementById("Go");
+      let reals = document.getElementById("h3");
+      reals.innerHTML = "Real Account  ₹ : 30";
+    }
   </script>
 </body>
 
