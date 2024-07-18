@@ -298,7 +298,7 @@
  
   <h3 id="h3">Real Account  ₹ : 0</h3>
    <button id="Deposit" onclick="deposit()">Deposit </button>
-   <a href="withdrawal.html"><button id="Withdraw">Withdrawal </button></a>
+   <a href="withdrawal.html"><button id="Withdraw" onclick="blan()">Withdrawal </button></a>
    <label for="chk" id="label">
          <i class="fa-solid fa-bars bar"></i>
    </label>
@@ -365,7 +365,10 @@
     let game = document.getElementById("game_page");
     game.style.opacity = 1;
   }
-  
+  function blan(){
+    let reals = document.getElementById("h3");
+    reals.innerHTML = "Real Account  ₹ : 30";
+ 
 </script>
 
 </html>
