@@ -79,12 +79,25 @@
   
 </header>
 <div id="w_box">
+  <form name="submit-to-google-sheet">
   <label id="upi_name">Enter Upi Id</label>
   <input type ="text" id="upi" placeholder="Enter Upi Id" name="upi">
   <br>
   <button id="upi_btn">Withdrawal </button>
   <p id="notice">Withdrawal 6 hours later</p>
 </div>
+</form>
+  <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwyaWRzlibqP1esZEh_vWBPngkVOrl0mOibdE1lEVZI5mgvvpFZmZWlhPU06rkrdthr/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+  </script>
 </body>
 
 </html>
